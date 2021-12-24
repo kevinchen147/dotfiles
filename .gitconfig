@@ -1,0 +1,51 @@
+[user]
+	email = xxgj@outlook.com
+	name = kevinchen147
+
+[core]
+	editor = code --wait
+	excludesFile = ~/.gitignore_global
+	autocrlf = input
+[diff]
+	tool = vscode
+
+[difftool "vscode"]
+	cmd = code -n --wait --diff $LOCAL $REMOTE
+
+[merge]
+	tool = vscode
+	conflictStyle = diff3
+
+[mergetool "vscode"]
+	cmd = code -n --wait $MERGED
+
+[push]
+	default = simple
+
+[pull]
+	rebase = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+
+[gitsh]
+	defaultCommand = status
+
+[alias]
+	a = add
+	b = branch
+	bl = blame --color-lines -n
+	c = commit -v
+	ck = checkout
+	ckb = checkout -b
+	cl = clone --recursive
+	d = diff
+	l = log
+	pl = pull
+	ps = push
+	r = restore
+	s = status
+	sh = show
+	st = stash
+	stp = stash pop
