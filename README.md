@@ -23,7 +23,7 @@ source bootstrap.sh
 To install these dotfiles without Git:
 
 ```bash
-cd; curl -#L https://github.com/kevinchen147/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh}
+cd ~ && curl -#L https://github.com/kevinchen147/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh} && source ~/.profile
 ```
 
 To update later on, just run that command again.
