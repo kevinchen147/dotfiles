@@ -1,4 +1,9 @@
 if status is-interactive
+    # +----------+
+    # | Greeting |
+    # +----------+
+    set -g fish_greeting
+
     # +----+
     # | Vi |
     # +----+
