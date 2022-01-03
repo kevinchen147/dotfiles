@@ -22,7 +22,6 @@ if status is-interactive
     # +------+
     # | Abbr |
     # +------+
-    abbr --add g "git"
     abbr --add .... "cd ../../.."
     abbr --add ... "cd ../.."
     abbr --add .. "cd .."
