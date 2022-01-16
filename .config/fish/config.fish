@@ -30,7 +30,21 @@ if status is-interactive
     abbr --add c "code"
     abbr --add d "sudo docker"
     abbr --add g "git"
+    abbr --add p "sudo pacman"
     abbr --add py "python3"
-    abbr --add on "gsettings set org.gnome.system.proxy mode manual"
-    abbr --add off "gsettings set org.gnome.system.proxy mode none"
+    abbr --add v "vim"
+end
+
+if status is-login
+    # +-------+
+    # | Proxy |
+    # +-------+
+    on
+    
+    # +---+
+    # | X |
+    # +---+
+    if test -z "$DISPLAY" -a $XDG_VTNR = 1
+	    exec startx
+	end
 end
