@@ -19,6 +19,7 @@ linux-firmware
 lsof
 make
 man-db
+noto-fonts-emoji
 nvidia
 openresolv
 plasma-meta
