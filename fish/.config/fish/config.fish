@@ -32,7 +32,7 @@ if status is-interactive
     abbr --add g "git"
     abbr --add p "sudo pacman"
     abbr --add py "python3"
-    abbr --add v "vim"
+    abbr --add v "nvim"
 end
 
 if status is-login
