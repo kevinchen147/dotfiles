@@ -40,11 +40,11 @@ if status is-login
     # | Proxy |
     # +-------+
     on
-    
+
     # +---+
     # | X |
     # +---+
     if test -z "$DISPLAY" -a $XDG_VTNR = 1
-	    exec startx
+        exec startx
 	end
 end
