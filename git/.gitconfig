@@ -35,7 +35,7 @@
 [alias]
 	a = add
 	b = branch
-	bl = blame --color-lines -n
+	bl = blame --color-lines -L
 	c = commit -v
 	ck = checkout
 	ckb = checkout -b
