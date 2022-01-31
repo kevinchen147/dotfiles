@@ -1,6 +1,7 @@
 [user]
 	email = xxgj@outlook.com
 	name = kevinchen147
+	signingkey = DD3CE4B932A6DE6A
 
 [core]
 	editor = code --wait
