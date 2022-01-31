@@ -50,3 +50,9 @@
 	sh = show
 	st = stash
 	stp = stash pop
+
+[gpg]
+	program = gpg
+
+[commit]
+	gpgsign = true

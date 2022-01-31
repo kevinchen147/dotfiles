@@ -4,6 +4,11 @@ if status is-interactive
     # +----------+
     set -g fish_greeting
 
+    # +-----+
+    # | GPG |
+    # +-----+
+    set -gx GPG_TTY (tty)
+
     # +----+
     # | Vi |
     # +----+
