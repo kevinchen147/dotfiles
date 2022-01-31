@@ -15,9 +15,6 @@ if status is-interactive
     if test -d "$HOME/.local/bin/"
         fish_add_path -m "$HOME/.local/bin/"
     end
-    if test -d "/usr/local/go/bin"
-        fish_add_path -m "/usr/local/go/bin"
-    end
 
     # +------+
     # | Abbr |
@@ -33,18 +30,9 @@ if status is-interactive
     abbr --add p "sudo pacman"
     abbr --add py "python3"
     abbr --add v "nvim"
-end
 
-if status is-login
     # +-------+
     # | Proxy |
     # +-------+
     on
-
-    # +---+
-    # | X |
-    # +---+
-    if test -z "$DISPLAY" -a $XDG_VTNR = 1
-        exec startx
-    end
 end
