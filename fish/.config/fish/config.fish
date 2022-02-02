@@ -24,15 +24,15 @@ if status is-interactive
     # +------+
     # | Abbr |
     # +------+
-    abbr --add .... "cd ../../.."
-    abbr --add ... "cd ../.."
-    abbr --add .. "cd .."
     abbr --add - "cd -"
+    abbr --add .. "cd .."
+    abbr --add ... "cd ../.."
+    abbr --add .... "cd ../../.."
     abbr --add _ "sudo"
     abbr --add c "code"
     abbr --add d "sudo docker"
     abbr --add g "git"
-    abbr --add p "sudo pacman"
+    abbr --add o "explorer.exe"
     abbr --add py "python3"
     abbr --add v "nvim"
 
