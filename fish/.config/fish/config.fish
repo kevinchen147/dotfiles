@@ -37,9 +37,12 @@ if status is-interactive
     abbr --add o "explorer.exe"
     abbr --add py "python3"
     abbr --add v "nvim"
+end
 
+if status is-login
     # +-------+
     # | Proxy |
     # +-------+
+    ~/xray/xray > /dev/null 2>&1 &
     on
 end

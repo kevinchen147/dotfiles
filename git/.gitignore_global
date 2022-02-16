@@ -58,7 +58,6 @@ __pycache__/
 # +-----+
 # | IDE |
 # +-----+
-.vscode/
 *.iml
 .idea/
 *.ipr
