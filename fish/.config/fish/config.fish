@@ -44,6 +44,5 @@ if status is-login
     # +-------+
     # | Proxy |
     # +-------+
-    ~/xray/xray > /dev/null 2>&1 &
     on
 end
