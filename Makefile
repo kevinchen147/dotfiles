@@ -2,7 +2,7 @@
 
 FISH := /usr/bin/fish
 
-all: fish setup stow
+all: fish stow
 
 fish: path greeting abbr
 
