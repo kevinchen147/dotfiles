@@ -14,16 +14,16 @@ greeting:
 
 abbr:
 	$(FISH) -c "abbr --add - 'cd -' \
-    && abbr --add .. 'cd ..' \
-    && abbr --add ... 'cd ../..' \
-    && abbr --add .... 'cd ../../..' \
-    && abbr --add _ 'sudo' \
-    && abbr --add c 'code' \
-    && abbr --add d 'sudo docker' \
-    && abbr --add g 'git' \
-    && abbr --add m 'make' \
-    && abbr --add o 'explorer.exe' \
-    && abbr --add py 'python3'"
+	&& abbr --add .. 'cd ..' \
+	&& abbr --add ... 'cd ../..' \
+	&& abbr --add .... 'cd ../../..' \
+	&& abbr --add _ 'sudo' \
+	&& abbr --add c 'code' \
+	&& abbr --add d 'sudo docker' \
+	&& abbr --add g 'git' \
+	&& abbr --add m 'make' \
+	&& abbr --add o 'explorer.exe' \
+	&& abbr --add py 'python3'"
 
 setup:
 	sudo apt update \
