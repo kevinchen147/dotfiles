@@ -1,12 +1,19 @@
-.PHONY: stow setup path abbr
+.PHONY: setup stow abbr
 
-FISH := /usr/bin/fish
+all: setup stow abbr
+
+setup:
+	sudo apt update \
+	&& sudo apt upgrade \
+	&& sudo apt -y install git git-lfs build-essential stow python3-distutils python3-venv \
+	&& sudo apt autoremove -y && sudo apt clean -y \
+	&& git lfs install
 
 stow:
 	git pull origin main && stow -v -R */
 
 abbr:
-	$(FISH) -c "abbr --add - 'cd -' \
+	/usr/bin/fish -c "abbr --add - 'cd -' \
 	&& abbr --add .. 'cd ..' \
 	&& abbr --add ... 'cd ../..' \
 	&& abbr --add .... 'cd ../../..' \
@@ -17,13 +24,3 @@ abbr:
 	&& abbr --add l 'less' \
 	&& abbr --add m 'make' \
 	&& abbr --add py 'python3'"
-
-path:
-	$(FISH) -c "fish_add_path -m '$(HOME)/.local/bin/'"
-
-setup:
-	sudo apt update \
-	&& sudo apt upgrade \
-	&& sudo apt -y install git git-lfs build-essential stow python3-distutils python3-venv \
-	&& sudo apt autoremove -y && sudo apt clean -y \
-	&& git lfs install
