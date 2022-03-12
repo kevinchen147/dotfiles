@@ -1,16 +1,9 @@
-.PHONY: stow setup fish path greeting abbr
+.PHONY: stow setup path abbr
 
 FISH := /usr/bin/fish
 
-all: fish stow
-
-fish: path greeting abbr
-
-path:
-	$(FISH) -c "fish_add_path -m '$(HOME)/.local/bin/'"
-
-greeting:
-	$(FISH) -c "set -gx fish_greeting"
+stow:
+	git pull origin main && stow -v -R */
 
 abbr:
 	$(FISH) -c "abbr --add - 'cd -' \
@@ -23,8 +16,10 @@ abbr:
 	&& abbr --add g 'git' \
 	&& abbr --add l 'less' \
 	&& abbr --add m 'make' \
-	&& abbr --add o 'explorer.exe' \
 	&& abbr --add py 'python3'"
+
+path:
+	$(FISH) -c "fish_add_path -m '$(HOME)/.local/bin/'"
 
 setup:
 	sudo apt update \
@@ -32,6 +27,3 @@ setup:
 	&& sudo apt -y install git git-lfs build-essential stow python3-distutils python3-venv \
 	&& sudo apt autoremove -y && sudo apt clean -y \
 	&& git lfs install
-
-stow:
-	git pull origin main && stow -v -R */
