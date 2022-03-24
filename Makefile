@@ -1,6 +1,6 @@
-.PHONY: setup stow abbr
+.PHONY: setup stow
 
-all: setup stow abbr
+all: setup stow
 
 setup:
 	sudo apt update \
@@ -11,16 +11,3 @@ setup:
 
 stow:
 	git pull origin main && stow -v -R */
-
-abbr:
-	/usr/bin/fish -c "abbr --add - 'cd -' \
-	&& abbr --add .. 'cd ..' \
-	&& abbr --add ... 'cd ../..' \
-	&& abbr --add .... 'cd ../../..' \
-	&& abbr --add _ 'sudo' \
-	&& abbr --add c 'code' \
-	&& abbr --add d 'sudo docker' \
-	&& abbr --add g 'git' \
-	&& abbr --add l 'less' \
-	&& abbr --add m 'make' \
-	&& abbr --add py 'python3'"
