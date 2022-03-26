@@ -26,9 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# GPG_TTY
-export GPG_TTY=$(tty)
-
 # proxy
 export http_proxy=http://127.0.0.1:7777
 export https_proxy=http://127.0.0.1:7777
+
+# tex
+export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH

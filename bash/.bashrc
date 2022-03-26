@@ -115,3 +115,6 @@ fi
 # self
 set -o vi
 set -o physical
+
+# GPG_TTY
+export GPG_TTY=$(tty)
