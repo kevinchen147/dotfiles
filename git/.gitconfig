@@ -5,7 +5,6 @@
 
 [core]
 	editor = code --wait
-	excludesFile = ~/.gitignore_global
 	autocrlf = input
 
 [diff]
