@@ -34,3 +34,6 @@ export https_proxy=http://127.0.0.1:7777
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info:$INFOPATH
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
