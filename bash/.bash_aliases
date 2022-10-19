@@ -8,8 +8,10 @@ alias g="git"
 alias l='less'
 alias ll='ls -alF --color=always'
 alias ls='ls -hF --color=always'
-alias py="python3"
 alias m="make"
+alias o="explorer.exe" # for WSL
+alias py="python3"
+
 alias on="export {http,https}_proxy=127.0.0.1:7777"
 alias off="export {http,https}_proxy="
 
