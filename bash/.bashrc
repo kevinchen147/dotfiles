@@ -114,7 +114,7 @@ fi
 
 # self
 set -o vi
-export VISUAL=vim
+export VISUAL=vi
 set -o physical
 
 # GPG_TTY
