@@ -12,7 +12,7 @@ arch:
 	&& git lfs install
 
 cli:
-	git pull origin main && stow -v -R bash/ git/ ssh/ vim/ pip/
+	git pull origin main && stow -v -R bash/ git/ ssh/ vim/ pip/ npm/
 
 gui:
 	git pull origin main && stow -v -R i3/ x/
