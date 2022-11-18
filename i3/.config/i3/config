@@ -185,3 +185,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+for_window [class=.*] border normal 1

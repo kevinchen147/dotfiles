@@ -11,6 +11,7 @@ alias ls='ls -hF --color=always'
 alias m="make"
 alias o="explorer.exe" # for WSL
 alias py="python3"
+alias r="ranger"
 
 alias on="export {http,https}_proxy=127.0.0.1:7777"
 alias off="export {http,https}_proxy="
