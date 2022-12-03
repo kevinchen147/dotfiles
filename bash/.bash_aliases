@@ -9,7 +9,7 @@ alias l='less'
 alias ll='ls -alF --color=always'
 alias ls='ls -hF --color=always'
 alias m="make"
-alias o="explorer.exe" # for WSL
+alias o="xdg-open"
 alias py="python3"
 alias r="ranger"
 

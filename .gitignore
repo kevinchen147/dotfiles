@@ -1,0 +1,4 @@
+/ibus/.config/ibus/bus
+/ibus/.config/ibus/rime/*
+!/ibus/.config/ibus/rime/default.yaml
+!/ibus/.config/ibus/rime/double_pinyin_mspy.schema.yaml
