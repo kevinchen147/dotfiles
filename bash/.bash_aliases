@@ -7,7 +7,7 @@ alias d="sudo docker"
 alias g="git"
 alias l='less'
 alias ll='ls -alF --color=always'
-alias ls='ls -hF --color=always'
+alias ls='ls -alFh --color=always'
 alias m="make"
 alias o="xdg-open"
 alias py="python3"

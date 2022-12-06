@@ -1,7 +1,7 @@
 # Rime schema
 # encoding: utf-8
 
-# TODO
+# TODO(MWE)
 
 schema:
   schema_id: double_pinyin_mspy
@@ -145,8 +145,6 @@ punctuator:
 
 key_binder:
   import_preset: default
-#   bindings:
-#     - { when: always, accept: Control+Space, toggle: ascii_punct } 
 
 recognizer:
   import_preset: default
@@ -154,7 +152,7 @@ recognizer:
     reverse_lookup: "`[a-z]*'?$"
 
 ascii_composer:
-  good_old_caps_lock: false
+  good_old_caps_lock: true
   switch_key:
     Shift_R: clear
     # Control_L: clear
