@@ -163,3 +163,5 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
+
+set clipboard+=unnamedplus
