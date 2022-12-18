@@ -35,5 +35,5 @@ export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH
 
 # golang
-export PATH=$PATH:/usr/local/go/bin:/home/xxgj/.local/bin:/home/xxgj/go/bin:/home/xxgj/clash
 export GOPATH=/home/xxgj/go
+export PATH=$PATH:$GOPATH/bin
