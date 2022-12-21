@@ -1,7 +1,7 @@
 # Rime schema
 # encoding: utf-8
 
-# TODO(MWE)
+# TODO(Minimal Reproducible Example)
 
 schema:
   schema_id: double_pinyin_mspy
@@ -16,12 +16,13 @@ schema:
 
 switches:
   - name: ascii_mode
-    reset: 1
+    reset: 0
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
   - name: simplification
-    states: [ 汉字, 漢字 ]
+    reset: 1
+    states: [ 漢字, 汉字 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -150,12 +151,3 @@ recognizer:
   import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*'?$"
-
-ascii_composer:
-  good_old_caps_lock: true
-  switch_key:
-    Shift_R: clear
-    # Control_L: clear
-    # Control_R: noop
-    Caps_Lock: clear
-    Eisu_toggle: clear
