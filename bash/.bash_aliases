@@ -10,10 +10,11 @@ alias ll='ls -alF --color=always'
 alias ls='ls -alFh --color=always'
 alias m="make"
 alias o="xdg-open"
-alias py="python3"
+alias p="sudo pacman"
+alias py="python"
 alias r="ranger"
 
-alias on="export {http,https}_proxy=127.0.0.1:7777"
+alias on="export {http,https}_proxy=127.0.0.1:6666"
 alias off="export {http,https}_proxy="
 
 alias vpn="cd /etc/openvpn && sudo openvpn --script-security 2 --config /etc/openvpn/client.ovpn --auth-user-pass /etc/openvpn/auth"

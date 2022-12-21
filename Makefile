@@ -8,11 +8,11 @@ debian:
 	&& git lfs install
 
 arch:
-	sudo pacman -Sy git-lfs base-devel stow gnupg noto-fonts \
-	&& git lfs install
+	sudo pacman -Sy base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 unzip vim dunst
+	rm ~/.bash_profile
 
 cli:
-	git pull origin main && stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/ # nvim/ alacritty/
+	git pull origin main && stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/
 
 gui:
 	git pull origin main && stow -v -R i3/ x/
