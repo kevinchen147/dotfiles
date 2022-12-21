@@ -1,0 +1,57 @@
+{
+    // vim
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "<C-[>"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save"
+                }
+            ],
+            "after": [
+                "<esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "s"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "s"
+            ]
+        },
+        {
+            "before": [
+                "<C-[>"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save"
+                }
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-k>": false,
+        "<C-r>": false,
+        "<C-y>": false,
+    },
+    "vim.easymotion": true,
+    // editor
+    "editor.cursorSurroundingLines": 6,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.stickyScroll.enabled": true,
+    // workbench
+    "workbench.colorTheme": "Default Light+",
+    "workbench.startupEditor": "none",
+    // security
+    "security.workspace.trust.untrustedFiles": "open",
+}

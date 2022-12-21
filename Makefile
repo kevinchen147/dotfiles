@@ -1,4 +1,4 @@
-.PHONY: debian arch cli gui
+.PHONY: debian arch cli gui code
 
 debian:
 	sudo apt update \
@@ -15,4 +15,11 @@ cli:
 	git pull origin main && stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/
 
 gui:
-	git pull origin main && stow -v -R i3/ x/
+	git pull origin main && stow -v -R i3/ x/ code/
+
+code:
+	code --install-extension DavidAnson.vscode-markdownlint
+	code --install-extension Lencerf.beancount
+	code --install-extension ms-pyright.pyright
+	code --install-extension ms-vscode.cpptools
+	code --install-extension vscodevim.vim
