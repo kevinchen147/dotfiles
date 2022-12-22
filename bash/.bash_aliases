@@ -5,9 +5,9 @@ alias _="sudo"
 alias c="code"
 alias d="sudo docker"
 alias g="git"
-alias l='less'
-alias ll='ls -alF --color=always'
-alias ls='ls -alFh --color=always'
+alias l="less"
+alias ll="ls -alFh --color=auto"
+alias ls="ls -aF --color=auto"
 alias m="make"
 alias o="xdg-open"
 alias p="sudo pacman"
