@@ -13,6 +13,7 @@ alias o="xdg-open"
 alias p="sudo pacman"
 alias py="python"
 alias r="ranger"
+alias t="task"
 
 alias on="export {http,https}_proxy=127.0.0.1:6666"
 alias off="export {http,https}_proxy="
