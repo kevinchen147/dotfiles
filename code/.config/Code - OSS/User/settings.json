@@ -44,6 +44,7 @@
         "<C-y>": false,
     },
     "vim.easymotion": true,
+    "vim.highlightedyank.enable": true,
     // editor
     "editor.cursorSurroundingLines": 6,
     "editor.formatOnSave": true,
