@@ -35,5 +35,8 @@ export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH
 
 # golang
-export GOPATH=/home/xxgj/go
+export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
+
+# xdg
+export XDG_CONFIG_HOME=${HOME}/.config

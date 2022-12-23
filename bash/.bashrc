@@ -112,9 +112,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# self
+# vi
 set -o vi
 export VISUAL=vi
+
+# resolve symbolic links
 set -o physical
 
 # GPG_TTY
