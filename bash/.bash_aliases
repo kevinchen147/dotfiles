@@ -13,6 +13,7 @@ alias o="xdg-open"
 alias p="sudo pacman"
 alias py="python"
 alias r="ranger"
+alias s="sudo systemctl"
 alias t="task"
 
 alias on="export {http,https}_proxy=127.0.0.1:6666"
