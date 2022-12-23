@@ -114,7 +114,7 @@ fi
 
 # vi
 set -o vi
-export VISUAL=vi
+export VISUAL=vim
 
 # resolve symbolic links
 set -o physical
