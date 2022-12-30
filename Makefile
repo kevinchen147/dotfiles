@@ -11,7 +11,7 @@ arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 unzip vim dunst python
 
 cli:
-	# sudo pacman -S task openssh
+	# sudo pacman -S task openssh keybase keybase-gui kbfs
 	stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/ task/
 
 gui:
