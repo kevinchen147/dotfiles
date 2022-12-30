@@ -40,3 +40,8 @@ export PATH=$PATH:$GOPATH/bin
 
 # xdg
 export XDG_CONFIG_HOME=${HOME}/.config
+
+# x
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi

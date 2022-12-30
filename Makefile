@@ -8,17 +8,19 @@ debian:
 	&& git lfs install
 
 arch:
-	sudo pacman -Sy base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 unzip vim dunst
+	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 unzip vim dunst python
 
 cli:
-	git pull origin main && stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/
+	# sudo pacman -S task openssh
+	stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/ task/
 
 gui:
-	git pull origin main && stow -v -R i3/ x/ code/
+	# sudo pacman -S xorg xorg-xinit firefox code ibus-rime
+	stow -v -R i3/ x/ code/ alacritty/
 
 code:
 	code --install-extension DavidAnson.vscode-markdownlint
 	code --install-extension Lencerf.beancount
 	code --install-extension ms-pyright.pyright
-	code --install-extension ms-vscode.cpptools
 	code --install-extension vscodevim.vim
+	# code --install-extension ms-vscode.cpptools
