@@ -12,11 +12,11 @@ arch:
 
 cli:
 	# sudo pacman -S task openssh keybase keybase-gui kbfs
-	stow -v -R bash/ git/ ssh/ vim/ pip/ npm/ ibus/ task/
+	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ ibus/ task/
 
 gui:
 	# sudo pacman -S xorg xorg-xinit firefox code ibus-rime
-	stow -v -R i3/ x/ code/ alacritty/
+	stow -t ~ -v -S i3/ x/ code/ alacritty/
 
 code:
 	code --install-extension DavidAnson.vscode-markdownlint

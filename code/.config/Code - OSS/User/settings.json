@@ -51,9 +51,12 @@
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": true,
+    "editor.wordWrap": "on",
     // workbench
     "workbench.colorTheme": "Default Light+",
     "workbench.startupEditor": "none",
     // security
     "security.workspace.trust.untrustedFiles": "open",
+    // windows
+    "window.zoomLevel": 4,
 }
