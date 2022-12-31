@@ -3,19 +3,20 @@
 debian:
 	sudo apt update \
 	&& sudo apt upgrade -y \
-	&& sudo apt install git git-lfs build-essential stow python3-distutils python3-venv -y \
+	&& sudo apt install git git-lfs build-essential stow python3-distutils \
+	python3-venv -y \
 	&& sudo apt autoremove -y && sudo apt clean -y \
 	&& git lfs install
 
 arch:
-	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 unzip vim dunst python
+	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
+	unzip vim dunst python task openssh keybase keybase-gui kbfs xorg \
+	xorg-xinit firefox code ibus-rime
 
 cli:
-	# sudo pacman -S task openssh keybase keybase-gui kbfs
 	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ ibus/ task/
 
 gui:
-	# sudo pacman -S xorg xorg-xinit firefox code ibus-rime
 	stow -t ~ -v -S i3/ x/ code/ alacritty/
 
 code:
