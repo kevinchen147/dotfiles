@@ -14,10 +14,10 @@ arch:
 	xorg-xinit firefox code ibus-rime
 
 cli:
-	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ ibus/ task/
+	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/
 
 gui:
-	stow -t ~ -v -S i3/ x/ code/ alacritty/
+	stow -t ~ -v -S i3/ x/ code/ alacritty/ ibus/
 
 code:
 	code --install-extension DavidAnson.vscode-markdownlint
