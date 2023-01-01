@@ -25,14 +25,15 @@ require('packer').startup(function(use)
       'folke/neodev.nvim',
     },
 
-    use {
-      'phaazon/hop.nvim',
-      branch = 'v2', -- optional but strongly recommended
-      config = function()
-        -- you can configure Hop the way you like here; see :h hop-config
-        require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-      end
-    }
+  }
+
+  use { -- EasyMotion-like plugin allowing you to jump anywhere
+    'phaazon/hop.nvim',
+    branch = 'v2', -- optional but strongly recommended
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
   }
 
   use { -- Autocompletion
@@ -111,6 +112,7 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Make the system clipboard work with Neovim
 vim.o.clipboard = "unnamedplus"
 
 -- Enable mouse mode
@@ -342,6 +344,7 @@ local on_attach = function(_, bufnr)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
 
+  -- Format code with <C-[>
   nmap('<C-[>', vim.lsp.buf.format, 'Format Code')
 end
 
@@ -439,6 +442,7 @@ cmp.setup {
   },
 }
 
+-- hop configuration
 local hop = require('hop')
 vim.keymap.set('', 's', function() hop.hint_char1() end, { remap = true })
 
