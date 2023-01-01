@@ -1,4 +1,4 @@
-.PHONY: debian arch cli gui code
+.PHONY: debian arch cli gui
 
 debian:
 	sudo apt update \
@@ -11,17 +11,11 @@ debian:
 arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
 	unzip neovim dunst python task openssh keybase keybase-gui kbfs xorg \
-	xorg-xinit firefox code ibus-rime clang nodejs npm
+	xorg-xinit firefox ibus-rime clang
 
 cli:
 	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/ nvim/
 
 gui:
 	stow -t ~ -v -S i3/ x/ code/ alacritty/ ibus/
-
-code:
-	code --install-extension DavidAnson.vscode-markdownlint
-	code --install-extension Lencerf.beancount
-	code --install-extension ms-pyright.pyright
-	code --install-extension vscodevim.vim
-	# code --install-extension ms-vscode.cpptools
+	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/
