@@ -2,37 +2,24 @@
 	email = xxgj@outlook.com
 	name = xxgj
 	signingkey = F85B0A33F9C99749F5431625B55070049A51312D
-
 [core]
-	editor = code --wait
+	editor = nvim
 	autocrlf = input
-
+[difftool]
+	prompt = true
 [diff]
-	tool = vscode
-
-[difftool "vscode"]
-	cmd = code -n --wait --diff $LOCAL $REMOTE
-
+	tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [merge]
-	tool = vscode
 	conflictStyle = diff3
-
-[mergetool "vscode"]
-	cmd = code -n --wait $MERGED
-
 [push]
 	default = simple
-
 [pull]
 	rebase = true
-
 [rebase]
 	autoSquash = true
 	autoStash = true
-
-[gitsh]
-	defaultCommand = status
-
 [alias]
 	a = add
 	b = branch
@@ -50,13 +37,10 @@
 	sh = show
 	st = stash
 	stp = stash pop
-
 [gpg]
 	program = gpg
-
 [commit]
 	gpgsign = true
-
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
