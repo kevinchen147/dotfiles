@@ -10,7 +10,7 @@
 [diff]
 	tool = nvimdiff
 [difftool "nvimdiff"]
-	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+	cmd = nvim -d $LOCAL $REMOTE
 [merge]
 	conflictStyle = diff3
 [push]
