@@ -1,0 +1,11 @@
+[general]
+engines-order=['rime', 'xkb:us::eng']
+preload-engines=['xkb:us::eng', 'rime']
+version='1.5.27'
+
+[general/hotkey]
+triggers=['<Control>space']
+
+[panel]
+custom-font='Sans 20'
+use-custom-font=true

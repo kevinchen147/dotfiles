@@ -19,3 +19,9 @@ cli:
 gui:
 	stow -t ~ -v -S i3/ x/ alacritty/ ibus/
 	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/
+
+ibus-load:
+	dconf load /desktop/ibus/ < ./ibus/ibus.dconf
+
+ibus-dump:
+	dconf dump /desktop/ibus/ > ./ibus/ibus.dconf
