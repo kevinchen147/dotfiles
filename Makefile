@@ -11,11 +11,11 @@ debian:
 arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
 	unzip neovim dunst python task openssh keybase keybase-gui kbfs xorg \
-	xorg-xinit firefox ibus-rime clang
+	xorg-xinit firefox ibus-rime clang alacritty
 
 cli:
 	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/ nvim/
 
 gui:
-	stow -t ~ -v -S i3/ x/ code/ alacritty/ ibus/
+	stow -t ~ -v -S i3/ x/ alacritty/ ibus/
 	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/
