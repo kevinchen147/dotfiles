@@ -10,11 +10,11 @@ debian:
 
 arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
-	unzip vim dunst python task openssh keybase keybase-gui kbfs xorg \
-	xorg-xinit firefox code ibus-rime
+	unzip neovim dunst python task openssh keybase keybase-gui kbfs xorg \
+	xorg-xinit firefox code ibus-rime clang nodejs npm
 
 cli:
-	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/
+	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/ nvim/
 
 gui:
 	stow -t ~ -v -S i3/ x/ code/ alacritty/ ibus/
