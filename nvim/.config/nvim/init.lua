@@ -106,7 +106,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 -- See `:help vim.o`
 
 -- Highlight current line
-vim.wo.cursorline = true
+vim.opt.cursorline = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -345,9 +345,6 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
-
-  -- Format code with <C-[>
-  nmap('<C-[>', vim.lsp.buf.format, 'Format Code')
 end
 
 -- Enable the following language servers
@@ -444,9 +441,15 @@ cmp.setup {
   },
 }
 
--- hop configuration
+-- Hop configuration
 local hop = require('hop')
 vim.keymap.set('', 's', function() hop.hint_char1() end, { remap = true })
+
+-- Auto save
+vim.keymap.set({ 'n', 'i' }, '<C-[>', '<Esc>:w<CR>', { silent = true })
+
+-- Format on save
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
