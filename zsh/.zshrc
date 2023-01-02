@@ -113,4 +113,4 @@ alias on="export {http,https}_proxy=http://127.0.0.1:6666"
 alias off="export {http,https}_proxy="
 
 # GPG
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
