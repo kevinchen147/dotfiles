@@ -14,7 +14,7 @@ arch:
 	xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio pavucontrol
 
 cli:
-	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/ nvim/
+	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/
 
 gui:
 	stow -t ~ -v -S i3/ x/ alacritty/ ibus/
