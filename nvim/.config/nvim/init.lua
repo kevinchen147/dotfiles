@@ -105,11 +105,13 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
+-- Highlight current line
+vim.wo.cursorline = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Make the system clipboard work with Neovim
