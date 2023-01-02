@@ -449,7 +449,7 @@ vim.keymap.set('', 's', function() hop.hint_char1() end, { remap = true })
 vim.keymap.set({ 'n', 'i' }, '<C-[>', '<Esc>:w<CR>', { silent = true })
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

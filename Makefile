@@ -11,10 +11,11 @@ debian:
 arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
 	unzip neovim dunst python task openssh keybase keybase-gui kbfs xorg \
-	xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio pavucontrol
+	xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio pavucontrol \
+	kdeconnect
 
 cli:
-	stow -t ~ -v -S bash/ git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/
+	stow -t ~ -v -S git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/ zsh/
 
 gui:
 	stow -t ~ -v -S i3/ x/ alacritty/ ibus/
