@@ -114,3 +114,8 @@ alias off="export {http,https}_proxy="
 
 # GPG
 export GPG_TTY=$TTY
+
+# Auto jump
+[[ -s /home/xxgj/.autojump/etc/profile.d/autojump.sh ]] && source /home/xxgj/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
