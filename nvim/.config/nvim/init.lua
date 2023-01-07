@@ -327,7 +327,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-  pylsp = {},
+  jedi_language_server = {},
 
   sumneko_lua = {
     Lua = {
