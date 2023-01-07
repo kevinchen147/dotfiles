@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git vi-mode autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,7 +115,3 @@ alias off="export {http,https}_proxy="
 # GPG
 export GPG_TTY=$TTY
 
-# Auto jump
-[[ -s /home/xxgj/.autojump/etc/profile.d/autojump.sh ]] && source /home/xxgj/.autojump/etc/profile.d/autojump.sh
-
-autoload -U compinit && compinit -u
