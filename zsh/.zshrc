@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode z)
+plugins=(bgnotify vi-mode z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,11 +101,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias d="sudo docker"
 alias g="git"
+alias h="history"
+alias hg="history | grep"
+alias hgi="history | grep -i"
 alias m="make"
 alias o="xdg-open"
 alias p="sudo pacman"
 alias py="python"
-alias r="ranger"
 alias s="sudo systemctl"
 alias t="task"
 alias v="nvim"
