@@ -1,5 +1,5 @@
 [general]
-engines-order=['rime', 'xkb:us::eng']
+engines-order=['xkb:us::eng', 'rime']
 preload-engines=['xkb:us::eng', 'rime']
 version='1.5.27'
 
