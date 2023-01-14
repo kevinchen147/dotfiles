@@ -1,0 +1,1 @@
+rime-emoji/opencc/emoji_word.txt

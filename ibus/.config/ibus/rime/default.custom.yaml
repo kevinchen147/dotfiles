@@ -1,0 +1,11 @@
+# encoding: utf-8
+
+patch:
+  # page size
+  menu:
+    page_size: 8
+
+  # leave only double pinyin(mspy)
+  schema_list:
+    - schema: double_pinyin_mspy
+

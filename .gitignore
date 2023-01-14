@@ -1,5 +1,9 @@
+# bus
 /ibus/.config/ibus/bus/*
-/ibus/.config/ibus/rime/*
-!/ibus/.config/ibus/rime/default.yaml
-!/ibus/.config/ibus/rime/double_pinyin_mspy.schema.yaml
 !/ibus/.config/ibus/bus/ibus.dconf
+
+# rime
+/ibus/.config/ibus/rime/installation.yaml
+/ibus/.config/ibus/rime/user.yaml
+/ibus/.config/ibus/rime/build/
+/ibus/.config/ibus/rime/luna_pinyin.userdb/

@@ -1,0 +1,3 @@
+[submodule "ibus/.config/ibus/rime/rime-emoji"]
+	path = ibus/.config/ibus/rime/rime-emoji
+	url = https://github.com/rime/rime-emoji.git

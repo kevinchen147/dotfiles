@@ -12,7 +12,7 @@ arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
 	unzip neovim dunst python task openssh keybase keybase-gui kbfs xorg \
 	xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio pavucontrol \
-	kdeconnect
+	kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji
 
 cli:
 	stow -t ~ -v -S git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/ zsh/
