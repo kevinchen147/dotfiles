@@ -19,8 +19,3 @@ export XDG_CONFIG_HOME=${HOME}/.config
 # nvim
 export VISUAL=nvim
 export VI_MODE_SET_CURSOR=true
-
-# x
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
-fi
