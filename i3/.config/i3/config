@@ -186,6 +186,4 @@ bar {
         status_command i3status
 }
 
-for_window [class=.*] border normal 1
-
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
