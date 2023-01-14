@@ -1,6 +1,5 @@
 # bus
-/ibus/.config/ibus/bus/*
-!/ibus/.config/ibus/bus/ibus.dconf
+/ibus/.config/ibus/bus/
 
 # rime
 /ibus/.config/ibus/rime/installation.yaml

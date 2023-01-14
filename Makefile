@@ -22,7 +22,7 @@ gui:
 	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/
 
 ibus-load:
-	dconf load /desktop/ibus/ < ./ibus/.config/ibus/bus/ibus.dconf
+	dconf load /desktop/ibus/ < ./ibus/.config/ibus/ibus.dconf
 
 ibus-dump:
-	dconf dump /desktop/ibus/ > ./ibus/.config/ibus/bus/ibus.dconf
+	dconf dump /desktop/ibus/ > ./ibus/.config/ibus/ibus.dconf
