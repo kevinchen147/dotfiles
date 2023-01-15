@@ -1,4 +1,4 @@
-.PHONY: debian arch cli gui
+.PHONY: *
 
 debian:
 	sudo apt update \
@@ -12,10 +12,18 @@ arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu i3 \
 	unzip neovim dunst python task openssh keybase keybase-gui kbfs xorg \
 	xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio pavucontrol \
-	kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji nodejs npm
+	kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji nodejs npm rust
 
 cli:
 	stow -t ~ -v -S git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/ zsh/
+
+lsp:
+	sudo npm i -g pyright markdownlint-cli
+	python -m pip install autopep8
+	cargo install stylua
+
+algo:
+	python -m pip install sortedcontainers
 
 gui:
 	stow -t ~ -v -S i3/ x/ alacritty/ ibus/

@@ -13,6 +13,9 @@ export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH
 export GOPATH=~/go
 export PATH=$PATH:$GOPATH/bin
 
+# rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 # xdg
 export XDG_CONFIG_HOME=${HOME}/.config
 
