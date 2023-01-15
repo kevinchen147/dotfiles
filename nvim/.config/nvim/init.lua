@@ -55,6 +55,7 @@ require('packer').startup(function(use)
   -- Git related plugins
   use 'lewis6991/gitsigns.nvim'
 
+  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'jiangmiao/auto-pairs' -- Auto close brackets
 
@@ -130,7 +131,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme morning]]
+vim.cmd [[colorscheme onedark]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
