@@ -65,6 +65,16 @@ require('packer').startup(function(use)
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
+  -- null-ls for linter and formatter
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("null-ls").setup()
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -411,8 +421,37 @@ vim.keymap.set('', 's', function() hop.hint_char1() end, { remap = true })
 -- Auto save
 vim.keymap.set({ 'n', 'i' }, '<C-[>', '<Esc>:w<CR>', { silent = true })
 
--- Format on save
-vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+-- null-ls configuration
+local null_ls = require("null-ls")
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.autopep8,
+    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.markdownlint,
+  },
+
+    -- you can reuse a shared lspconfig on_attach callback here
+    on_attach = function(client, bufnr)
+        if client.supports_method("textDocument/formatting") then
+            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                group = augroup,
+                buffer = bufnr,
+                callback = function()
+    vim.lsp.buf.format({
+        bufnr = bufnr,
+        filter = function(client)
+            return client.name == "null-ls"
+        end
+    })
+                end,
+            })
+        end
+    end,
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
