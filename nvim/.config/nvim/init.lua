@@ -107,6 +107,9 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 -- Highlight current line
 vim.opt.cursorline = true
 
+-- Set colorcolumn as 80
+vim.opt.colorcolumn = "80"
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -121,6 +124,9 @@ vim.o.mouse = "a"
 
 -- Enable break indent
 vim.o.breakindent = true
+
+-- Set shift width as 4
+vim.opt.shiftwidth = 4
 
 -- Save undo history
 vim.o.undofile = true
@@ -139,6 +145,9 @@ vim.cmd([[colorscheme onedark]])
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
+
+-- Show line number in netrw
+vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
@@ -213,7 +222,6 @@ require("nvim-treesitter.configs").setup({
 	ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript", "help" },
 
 	highlight = { enable = true },
-	indent = { enable = true, disable = { "python" } },
 	incremental_selection = {
 		enable = true,
 		keymaps = {
@@ -384,7 +392,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.clang_format,
-		null_ls.builtins.formatting.autopep8,
+		null_ls.builtins.formatting.autopep8.with({ extra_args = { "--experimental" } }),
 		null_ls.builtins.formatting.markdownlint,
 		null_ls.builtins.formatting.stylua,
 	},
