@@ -37,9 +37,7 @@ require("packer").startup(function(use)
 
 	use({ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			pcall(require("nvim-treesitter.install").update({ with_sync = true }))
-		end,
+		run = ":TSUpdate",
 	})
 
 	use({ -- Additional text objects via treesitter
@@ -50,7 +48,7 @@ require("packer").startup(function(use)
 	-- Git related plugins
 	use("lewis6991/gitsigns.nvim")
 
-	use("marko-cerovac/material.nvim") -- Material colorscheme
+	use("navarasu/onedark.nvim") -- Theme inspired by Atom
 	use("numToStr/Comment.nvim") -- "gc" to comment visual regions/lines
 	use("jiangmiao/auto-pairs") -- Auto close brackets
 
@@ -141,8 +139,7 @@ vim.wo.signcolumn = "yes"
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.g.material_style = "lighter"
-vim.cmd([[colorscheme material]])
+vim.cmd([[colorscheme onedark]])
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
@@ -181,6 +178,39 @@ require("gitsigns").setup({
 		topdelete = { text = "‾" },
 		changedelete = { text = "~" },
 	},
+	on_attach = function(bufnr)
+		local gs = package.loaded.gitsigns
+
+		local function map(mode, l, r, opts)
+			opts = opts or {}
+			opts.buffer = bufnr
+			vim.keymap.set(mode, l, r, opts)
+		end
+
+		-- Navigation
+		map("n", "]c", function()
+			if vim.wo.diff then
+				return "]c"
+			end
+			vim.schedule(function()
+				gs.next_hunk()
+			end)
+			return "<Ignore>"
+		end, { expr = true })
+
+		map("n", "[c", function()
+			if vim.wo.diff then
+				return "[c"
+			end
+			vim.schedule(function()
+				gs.prev_hunk()
+			end)
+			return "<Ignore>"
+		end, { expr = true })
+
+		-- Text object
+		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+	end,
 })
 
 -- [[ Configure Telescope ]]
@@ -220,7 +250,7 @@ vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { de
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup({
 	-- Add languages to be installed here that you want installed for treesitter
-	ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript", "help" },
+	ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript", "java", "sql", "markdown", "help" },
 
 	highlight = { enable = true },
 	incremental_selection = {
