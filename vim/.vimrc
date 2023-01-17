@@ -164,4 +164,14 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
+" Share clipboard with system
 set clipboard+=unnamedplus
+
+" For cjk character 'gq'
+set formatoptions+=mM
+
+" Set colorcolumn
+set colorcolumn=80
+
+" Set cursorline
+set cursorline

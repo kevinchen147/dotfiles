@@ -119,5 +119,4 @@ alias off="export {http,https}_proxy="
 export GPG_TTY=$TTY
 
 # Scripts
-alias cjk="nvim -u <(echo \"set formatoptions+=mM\nset colorcolumn=80\nset \
-relativenumber\") "
+alias cjk="nvim -u ~/.vimrc "

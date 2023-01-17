@@ -19,6 +19,7 @@ cli:
 	stow -t ~ -v -S git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/ zsh/
 
 lsp:
+	sudo pacman -S lua-language-server
 	sudo npm i -g pyright markdownlint-cli
 	python -m pip install autopep8
 	cargo install stylua
