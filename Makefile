@@ -13,19 +13,11 @@ arch:
 	i3 unzip neovim dunst python task openssh keybase keybase-gui kbfs \
 	xorg xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio \
 	pavucontrol kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji \
-	nodejs npm rust ripgrep fd
+	nodejs npm rust ripgrep fd python-sortedcontainers stylua pyright \
+	autopep8
 
 cli:
-	stow -t ~ -v -S git/ ssh/ vim/ pip/ npm/ task/ nvim/ tmux/ zsh/
-
-lsp:
-	sudo pacman -S lua-language-server
-	sudo npm i -g pyright markdownlint-cli
-	python -m pip install autopep8
-	cargo install stylua
-
-algo:
-	python -m pip install sortedcontainers
+	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/
 
 gui:
 	stow -t ~ -v -S i3/ x/ alacritty/ ibus/

@@ -117,6 +117,3 @@ alias off="export {http,https}_proxy="
 
 # GPG
 export GPG_TTY=$TTY
-
-# Scripts
-alias cjk="nvim -u ~/.vimrc "
