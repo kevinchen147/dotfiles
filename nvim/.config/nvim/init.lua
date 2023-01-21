@@ -43,7 +43,12 @@ require("packer").startup(function(use)
 
 	use("navarasu/onedark.nvim") -- Theme inspired by Atom
 	use("numToStr/Comment.nvim") -- "gc" to comment visual regions/lines
-	use("jiangmiao/auto-pairs") -- Auto close brackets
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	}) -- Auto close brackets
 
 	-- Fuzzy Finder (files, lsp, etc)
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x", requires = { "nvim-lua/plenary.nvim" } })
@@ -425,6 +430,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.autopep8.with({ extra_args = { "--experimental" } }),
+		null_ls.builtins.formatting.prettier.with({ extra_args = { "--prose-wrap=always" } }),
 		null_ls.builtins.formatting.stylua,
 	},
 

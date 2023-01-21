@@ -22,3 +22,6 @@ export XDG_CONFIG_HOME=${HOME}/.config
 # nvim
 export VISUAL=nvim
 export VI_MODE_SET_CURSOR=true
+
+# pass
+export PASSWORD_STORE_DIR=$HOME/projects/pass

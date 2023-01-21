@@ -12,9 +12,9 @@ arch:
 	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu \
 	i3 unzip neovim dunst python task openssh keybase keybase-gui kbfs \
 	xorg xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio \
-	pavucontrol kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji \
-	nodejs npm rust ripgrep fd python-sortedcontainers stylua pyright \
-	autopep8
+	kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji nodejs npm \
+	ripgrep fd python-sortedcontainers stylua pyright autopep8 socat \
+	prettier
 
 cli:
 	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/
