@@ -36,8 +36,6 @@
 	stp = stash pop
 [gpg]
 	program = gpg
-[commit]
-	gpgsign = true
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
