@@ -21,6 +21,7 @@ export XDG_CONFIG_HOME=${HOME}/.config
 
 # nvim
 export VISUAL=nvim
+export EDITOR=nvim
 export VI_MODE_SET_CURSOR=true
 
 # pass
