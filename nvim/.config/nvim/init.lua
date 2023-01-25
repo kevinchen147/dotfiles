@@ -107,11 +107,9 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Highlight current line
+-- Highlight current line and current column
 vim.opt.cursorline = true
-
--- Set colorcolumn as 80
-vim.opt.colorcolumn = "80"
+vim.opt.cursorcolumn = true
 
 -- Set highlight on search
 vim.o.hlsearch = false
