@@ -190,5 +190,5 @@ bar {
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox'
 
 # Operate notifications
-bindsym $mod+period exec --no-startup-id dunstctl close-all
+bindsym $mod+period exec --no-startup-id dunstctl close
 bindsym $mod+comma exec --no-startup-id dunstctl history-pop

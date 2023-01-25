@@ -13,8 +13,8 @@ arch:
 	i3 unzip neovim dunst python task openssh keybase keybase-gui kbfs \
 	xorg xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio \
 	kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji nodejs npm \
-	ripgrep fd python-sortedcontainers stylua pyright autopep8 socat \
-	prettier
+	ripgrep fd python-sortedcontainers pyright autopep8 socat prettier \
+	lua-language-server
 
 cli:
 	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/
