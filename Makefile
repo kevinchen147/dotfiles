@@ -11,7 +11,7 @@ debian:
 arch:
 	sudo pacman -S \
 	# utility
-	base-devel stow unzip task kdeconnect ripgrep fd socat \
+	base-devel stow unzip task kdeconnect ripgrep fd \
 	# secure shell
 	openssh \
 	# encryption
