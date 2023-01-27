@@ -9,12 +9,41 @@ debian:
 	&& git lfs install
 
 arch:
-	sudo pacman -S base-devel stow gnupg noto-fonts noto-fonts-cjk dmenu \
-	i3 unzip neovim dunst python task openssh keybase keybase-gui kbfs \
-	xorg xorg-xinit firefox ibus-rime clang alacritty xclip pulseaudio \
-	kdeconnect rime-double-pinyin rime-emoji noto-fonts-emoji nodejs npm \
-	ripgrep fd python-sortedcontainers pyright autopep8 socat prettier \
-	lua-language-server
+	sudo pacman -S \
+	# utility
+	base-devel stow unzip task kdeconnect ripgrep fd socat \
+	# secure shell
+	openssh \
+	# encryption
+	gnupg \
+	# shell
+	zsh \
+	# windows manager
+	i3 \
+	# launcher
+	dmenu \
+	# X server
+	xorg xorg-xinit xclip dunst \
+	# browser
+	firefox firefox-tridactyl \
+	# input method
+	ibus-rime rime-double-pinyin rime-emoji \
+	# driver
+	pulseaudio iwd dhcpcd \
+	# editor
+	neovim \
+	# programming language
+	python clang \
+	# development
+	nodejs npm \
+	# terminal emulator
+	alacritty \
+	# password manager
+	pass \
+	# library
+	python-sortedcontainers \
+	# language server protocol
+	pyright lua-language-server autopep8 prettier
 
 cli:
 	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/

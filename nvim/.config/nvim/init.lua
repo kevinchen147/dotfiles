@@ -79,6 +79,9 @@ require("packer").startup(function(use)
     requires = { "nvim-lua/plenary.nvim" },
   })
 
+  -- Outline
+  use 'simrat39/symbols-outline.nvim'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, "custom.plugins")
   if has_plugins then
@@ -476,17 +479,6 @@ require("nvim-tree").setup({
   view = {
     relativenumber = true,
   },
-  renderer = {
-    icons = {
-      show = {
-        file = false,
-        folder = false,
-        folder_arrow = false,
-        git = false,
-        modified = false,
-      },
-    },
-  },
   filters = {
     custom = { "^.git$" },
   },
@@ -514,6 +506,11 @@ require("indent_blankline").setup({
 
 -- Turn on lsp status information
 require("fidget").setup()
+
+-- Setup outline
+require("symbols-outline").setup()
+
+vim.keymap.set("n", "<leader>o", ":SymbolsOutline<CR>", { silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
