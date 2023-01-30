@@ -40,6 +40,8 @@ arch:
 	alacritty \
 	# password manager
 	pass \
+	# proxy
+	v2ray clash \
 	# library
 	python-sortedcontainers \
 	# language server protocol
