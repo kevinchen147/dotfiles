@@ -24,6 +24,8 @@ arch:
 	dmenu \
 	# X server
 	xorg xorg-xinit xclip dunst \
+	# fonts
+	noto-fonts noto-fonts-cjk ttf-ibmplex-mono-nerd \
 	# browser
 	firefox firefox-tridactyl \
 	# input method
