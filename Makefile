@@ -38,8 +38,8 @@ arch:
 	python clang \
 	# development
 	nodejs npm \
-	# terminal emulator
-	alacritty \
+	# terminal
+	alacritty tmux \
 	# password manager
 	pass \
 	# proxy
