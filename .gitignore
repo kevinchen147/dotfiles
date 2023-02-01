@@ -1,6 +1,3 @@
-# bus
-/ibus/.config/ibus/bus/
-
 # rime
 /ibus/.config/ibus/rime/installation.yaml
 /ibus/.config/ibus/rime/user.yaml
