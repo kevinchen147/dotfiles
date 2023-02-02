@@ -35,7 +35,7 @@ arch:
 	# editor
 	neovim \
 	# programming language
-	python clang \
+	python clang jdk-openjdk \
 	# development
 	nodejs npm \
 	# terminal
