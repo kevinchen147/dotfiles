@@ -34,10 +34,8 @@ arch:
 	pulseaudio iwd dhcpcd \
 	# editor
 	neovim \
-	# programming language
-	python clang jdk-openjdk \
-	# development
-	nodejs npm \
+	# programming
+	python clang jdk-openjdk maven nodejs npm \
 	# terminal
 	alacritty tmux \
 	# password manager
@@ -50,8 +48,8 @@ arch:
 	pyright lua-language-server autopep8 prettier
 
 cli:
-	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/
+	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/ maven/
 
 gui:
-	stow -t ~ -v -S i3/ x/ alacritty/ ibus/
+	stow -t ~ -v -S i3/ x/ alacritty/ ibus/ tridactyl/
 	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/

@@ -87,6 +87,12 @@ require("packer").startup(function(use)
   -- Outline
   use 'simrat39/symbols-outline.nvim'
 
+  -- Competitive programming
+  use 'p00f/cphelper.nvim'
+
+  -- Java language server
+  use 'mfussenegger/nvim-jdtls'
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, "custom.plugins")
   if has_plugins then
@@ -154,6 +160,11 @@ vim.o.smartcase = true
 -- Decrease update time
 vim.o.updatetime = 250
 vim.wo.signcolumn = "yes"
+
+-- Competitive programming helper
+vim.g["cph#dir"] = "/home/xxgj/projects/algorithm"
+vim.g["cph#vsplit"] = true
+vim.g["cph#cpp#compile_command"] = "g++ -std=c++17 -O2 -DXXGJ_DEBUG solution.cpp -o cpp.out"
 
 -- Set colorscheme
 vim.o.termguicolors = true
@@ -268,6 +279,7 @@ require("nvim-treesitter.configs").setup({
   ensure_installed = { "c", "cpp", "go", "lua", "python", "rust", "typescript", "java", "sql", "markdown", "help" },
 
   highlight = { enable = true },
+  indent = { enable = true },
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -401,11 +413,6 @@ require("lspconfig").sumneko_lua.setup({
         -- Get the language server to recognize the `vim` global
         globals = { "vim" },
       },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false,
-      },
       -- Do not send telemetry data containing a randomized but unique identifier
       telemetry = {
         enable = false,
@@ -417,6 +424,8 @@ require("lspconfig").sumneko_lua.setup({
 -- nvim-cmp setup
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+
+require("luasnip.loaders.from_lua").load()
 
 cmp.setup({
   snippet = {
@@ -516,6 +525,10 @@ require("fidget").setup()
 require("symbols-outline").setup()
 
 vim.keymap.set("n", "<leader>o", ":SymbolsOutline<CR>", { silent = true })
+
+-- Setup cphelper
+vim.keymap.set("n", "<leader>r", ":CphReceive<CR>", { silent = true })
+vim.keymap.set("n", "<leader>t", ":CphTest<CR>", { silent = true })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
