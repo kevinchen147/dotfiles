@@ -139,6 +139,7 @@ vim.opt.cursorline = true
 vim.o.hlsearch = false
 
 -- Make line numbers default
+vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Make the system clipboard work with Neovim
@@ -168,7 +169,7 @@ vim.g["cph#cpp#compile_command"] = "g++ -std=c++17 -O2 -DXXGJ_DEBUG solution.cpp
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd([[colorscheme onedark]])
+require('onedark').load()
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
