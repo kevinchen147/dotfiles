@@ -29,6 +29,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# external monitor
+if xrandr | grep "^DP-1 connected"; then
+    xrandr --output eDP-1 --off --output DP-1 --auto &
+fi
+
 # ibus
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
