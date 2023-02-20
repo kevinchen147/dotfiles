@@ -53,3 +53,6 @@ cli:
 gui:
 	stow -t ~ -v -S i3/ x/ alacritty/ ibus/ tridactyl/
 	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/
+
+monitor:
+	xrandr --output eDP-1 --off --output DP-1 --auto
