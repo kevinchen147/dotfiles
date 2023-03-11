@@ -51,8 +51,14 @@ cli:
 	stow -t ~ -v -S git/ ssh/ pip/ npm/ task/ nvim/ tmux/ zsh/ maven/
 
 gui:
-	stow -t ~ -v -S i3/ x/ alacritty/ ibus/ tridactyl/
+	stow -t ~ -v -S i3/ x/ alacritty/ ibus/ tridactyl/ code/
 	sudo stow -t /etc/X11/xorg.conf.d/ -v -S x11/
 
 monitor:
 	xrandr --output eDP-1 --off --output DP-1 --auto
+
+code:
+	code --install-extension DavidAnson.vscode-markdownlint
+	code --install-extension Lencerf.beancount
+	code --install-extension ms-pyright.pyright
+	code --install-extension vscodevim.vim

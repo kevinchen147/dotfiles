@@ -1,3 +1,6 @@
 [submodule "ibus/.config/ibus/rime/rime-emoji"]
 	path = ibus/.config/ibus/rime/rime-emoji
 	url = https://github.com/rime/rime-emoji.git
+[submodule "alacritty/.config/alacritty/themes"]
+	path = alacritty/.config/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme

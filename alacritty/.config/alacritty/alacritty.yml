@@ -9,3 +9,6 @@ shell:
     - new
     - -A
     - -smain
+
+import:
+  - ~/.config/alacritty/themes/themes/atom_one_light.yaml
