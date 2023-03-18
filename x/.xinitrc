@@ -32,6 +32,7 @@ fi
 # external monitor
 if xrandr | grep "^DP-1 connected"; then
     xrandr --output eDP-1 --off --output DP-1 --auto &
+    echo "Xft.dpi: 144" | xrdb -merge
 fi
 
 # ibus

@@ -1,7 +1,7 @@
 font:
   normal:
     family: BlexMono Nerd Font
-    style: Regular
+    family: Noto Sans Mono CJK SC
 
 shell:
   program: /usr/bin/tmux

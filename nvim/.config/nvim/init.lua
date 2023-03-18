@@ -404,6 +404,11 @@ require("lspconfig").pyright.setup({
   capabilities = capabilities,
 })
 
+require 'lspconfig'.gopls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
 require("lspconfig").clangd.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -512,6 +517,11 @@ require("nvim-tree").setup({
   filters = {
     custom = { "^.git$" },
   },
+  update_focused_file = {
+    enable      = true,
+    update_cwd  = false,
+    ignore_list = {}
+  }
 })
 
 vim.keymap.set("n", "<leader>e", ":NvimTreeFocus<CR>", { silent = true })

@@ -11,6 +11,7 @@ export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH
 
 # golang
 export GOPATH=~/go
+export GOPROXY=https://mirrors.aliyun.com/goproxy/
 export PATH=$PATH:$GOPATH/bin
 
 # rust
